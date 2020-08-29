@@ -1,0 +1,29 @@
+{
+  "name": "powersoft",
+  "version": "1.0.0",
+  "description": "project for quantumhack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node_modules/.bin/env-cmd -f ./config/dev.env nodemon src/app.js -e js,hbs,json,css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nabiin/powersoft.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nabiin/powersoft/issues"
+  },
+  "homepage": "https://github.com/Nabiin/powersoft#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        *{
+            padding : 0;
+            margin:0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body{
+            position: relative;
+        }
+        html{
+            font-size: 8px;
+        }
+
+        textarea{
+            resize: none;
+            font-size: 1.5rem;
+        }
+        section{
+            height: 100vh;
+        }
+.afterten{
+    display: flex;
+    flex-direction: column;
+    padding:2rem 10rem;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+label:not(:first-child){
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+label:first-child{
+    font-size: 2rem;
+    text-align: center;
+    background: rgb(110, 110, 110);
+    color: #fff;
+
+}
+label span{
+    display: block;
+    font-size: 1.6rem;
+    background: #f2f2f2;
+    color: red;
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(80, 80, 80, 0.87);
+    /* position: relative; */   
+opacity: 0;
+visibility: hidden;
+}
+/* 
+.popup:target{
+    opacity: 1;
+visibility: visible; 
+} */
+
+
+.popup .content{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% ,-50%);
+height: 80%;
+width: 70%;
+background: #fff;
+color: #000;
+position: relative;
+padding: 3rem;
+font-size: 2rem;
+}
+.content ul{
+list-style: none;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.content ul li{
+margin-bottom: 3rem;
+}
+
+.content a{
+    padding: 1rem;
+    font-size: 2rem;
+
+text-decoration: none;
+position: absolute;
+top: 3rem;
+right: 3rem;
+transition: all .2s;
+}
+
+
+
+label a{
+    padding: 1rem;
+    font-size: 2rem;
+    transition: all .2s;
+text-decoration: none;  
+margin-bottom: 2rem;
+}
+label a:hover{
+background: #f2f2f2;
+}
+.content a:hover{
+background: #f2f2f2;
+}
+.bold{
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+<section class="popup" id="popup">
+<div class="content">
+    <a href="">Go back</a>
+<ul>
+    <li><span class="bold"> Faculty :- </span><br><span id="showfaculty"></span></li>
+    <li><span  class="bold">Course Duration :- </span><br><span id="showcourseduration"></span></li>
+    <li><span  class="bold">numberofsubject :- </span><br><span id="shownumberofsubject"></span></li>
+    <li><span  class="bold"> All collages:- </span><br><span id="showcollages"></span></li>
+    <li><span  class="bold"> future-faculty:- </span><br><span id="showfuturefaculty"></span></li>
+    <li><span  class="bold">suggestions course :- </span> <br><span id="showsugcourse"></span></li>
+    <button class="send-but">Send</button>
+</ul>
+</div>
+</section>
+
+
+    <section class="afterten">
+        <label for="">After 10th</label>
+        <label for="collages">
+            Faculty:-
+            <br>
+            <select  onchange="optionvalueof(this)" name="Faculty" id="Faculty10+">
+                <option selected="true" value="open">open</option>
+                <option value="science" data="science">science</option>
+                <option value="Management" data="Management">Management</option>
+                <option value="Humanity" data="Humanity">Humanity</option>
+                <option value="Education" data="Education">Education</option>
+              </select>
+        </label>
+        
+        <label for="numberofyeaer">Course Duration
+            <br>
+            <input type="number" name="" id="duration10+">
+        </label>
+
+        <label for="numberofsubject"> Number of Subject
+            <br>
+            <input type="number" name="" id="numberofsubject10+">
+        </label>
+
+        <label for="collages">
+            all of the collages in nepal
+            <span>use comma for using different keyword</span>
+            <textarea name=""  cols="90" rows="3" id="collages10+"></textarea>
+        </label>
+
+        <label for="futurefaculty">
+            future-faculty
+            <span>use comma for using different keyword</span>
+
+            <textarea name=""  cols="90" rows="3" id="futurefaculty10+"></textarea>
+        </label>   
+        <label for="suggestions">
+            suggestions course 
+            <span>use comma for using different keyword</span>
+            <textarea name="" id="suggestions10+" cols="90" rows="3" ></textarea>
+        </label>
+        <label for="">
+            <a href="#popup" onclick="after10()">Proceed</a>
+        </label>
+    </section>
+
+
+
+    <section class="after12 afterten" style="background: #f2f2f2;">
+        <label for="">After 12th</label>
+        <label for="collages">
+            Faculty:-
+            <br>
+            <select onchange="optionvalueof(this)" name="Faculty" id="Faculty">
+               <option selected="true" value="open">open</option>
+                <option value="engineering" data="engineering">engineering</option>
+                <option value="Mbbs" data="Mbbs">Mbbs</option>
+                <option value="it" data="it">it</option>
+                <option value="bhm" data="bhm">bhm</option>
+              </select>
+        </label>
+        
+        <label for="">Course Duration
+            <br>
+            <input type="number" name="" id="duration12+">
+        </label>
+
+        <label for="numberofsubject"> Number of Subject
+            <br>
+            <input type="number" name="" id="numberofsubject12+">
+        </label>
+
+        <label for="collages">
+            all of the collages in nepal
+            <span>use comma for using different keyword</span>
+            <textarea name="" id="collages12+" cols="90" rows="3"></textarea>
+        </label>
+
+        <label for="futurefaculty">
+            future-faculty
+            <span>use comma for using different keyword</span>
+
+            <textarea name="" id="futurefaculty12+" cols="90" rows="3"></textarea>
+        </label>   
+        <label for="suggestions">
+            suggestions course 
+            <span>use comma for using different keyword</span>
+            <textarea name="" id="suggestions12+" cols="90" rows="3" required></textarea>
+        </label>
+        <label for="">
+            <a onclick="after12()" href="#popup">Proceed</a>
+        </label>
+    </section>
+</body>
+<script>
+
+let $uid; //for faculty 
+
+const $courseduration10 = document.getElementById('duration10+')
+const $courseduration12 =document.getElementById('duration12+')
+
+const $numberofsub10 = document.getElementById('numberofsubject10+')
+const $numberofsub12 = document.getElementById('numberofsubject12+')
+
+const $collages10 =document.getElementById('collages10+')
+const $collages12 =document.getElementById('collages12+')
+
+
+const futurefaculty10 =document.getElementById('futurefaculty10+')
+const futurefaculty12 =document.getElementById('futurefaculty12+')
+
+const suggestions10 =document.getElementById('suggestions10+')
+const suggestions12 =document.getElementById('suggestions12+')
+
+
+//dom values
+let showfaculty = document.getElementById('showfaculty').textContent
+let showcourseduration = document.getElementById('showcourseduration').textContent
+let shownumberofsubject = document.getElementById('shownumberofsubject').textContent
+let showcollages = document.getElementById('showcollages').textContent
+let showfuturefaculty = document.getElementById('showfuturefaculty').textContent
+let showsugcourse = document.getElementById('showsugcourse').textContent
+
+function clearValues(){
+    showfaculty = ''
+    showcourseduration=''
+    shownumberofsubject=''
+    showcollages =''
+    showfuturefaculty=''
+    showsugcourse=''
+}
+
+function addValues(faculty , due , numberofsub , collages , fufclt , crc ){
+    showfaculty = faculty ;
+    showcourseduration=due;
+    shownumberofsubject=numberofsub;
+    showcollages =collages;
+    showfuturefaculty=fufclt;
+    showsugcourse= crc; 
+
+    document.querySelector(.popup).style.target 
+    
+.popup:target{
+    opacity: 1;
+visibility: visible; 
+}
+}
+
+function after10(){
+clearValues();
+addValues($uid , $courseduration10.value ,  $numberofsub10.value ,$collages10.value , futurefaculty10.value , suggestions10.value)
+
+// console.log($courseduration10.value)
+// console.log($numberofsub10.value)
+// console.log($collages10.value)
+// console.log(futurefaculty10.value)
+// console.log(suggestions10.value)
+
+}
+
+function after12(){
+clearValues();
+
+ console.log($courseduration12.value)
+console.log($numberofsub12.value)
+console.log($collages12.value)
+console.log(futurefaculty12.value)
+console.log(suggestions12.value)
+}
+
+
+
+
+
+function optionvalueof(obj){
+    $uid = obj.options[obj.selectedIndex].getAttribute('data');
+    
+    if($uid == undefined){
+        $uid = ''
+        alert("reselect faculty")
+    }else{
+        console.log($uid)
+    }
+}
+
+
+
+
+</script>
+</html>
